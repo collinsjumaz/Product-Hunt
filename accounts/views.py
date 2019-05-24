@@ -14,11 +14,8 @@ def signup(request):
                 user = User.objects.create_user(request.POST['username'], password='password1')
                 auth.login(request, user)
         return redirect('home')
-        else:
-        return render(request, 'accounts/signup.html', {'error password must much'})
-
-else:
-return render(request, 'accounts/signup.html')
+    else:
+        return render(request, 'accounts/signup.html')
 
 
 def login(request):
