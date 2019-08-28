@@ -84,8 +84,6 @@ DATABASES = {
         'PORT':  '5432',
     }
 }
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -120,26 +118,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-import dotenv
-DOTENV_FILE = os.path.join(BASE_DIR, ".env")
-ENV = False
-
-if os.path.isfile(DOTENV_FILE):
-    ENV = True
-if ENV:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': dotenv.get_key(DOTENV_FILE, 'DB_NAME'),
-            'USER': dotenv.get_key(DOTENV_FILE, 'postgres'),
-            'PASSWORD': dotenv.get_key(DOTENV_FILE, 'capitolx89'),
-            'HOST': dotenv.get_key(DOTENV_FILE, 'DB_HOST'),
-            'PORT': dotenv.get_key(DOTENV_FILE, 'DB_PORT')
-        }
-    }
-else:
-    DATABASES = dict()
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
