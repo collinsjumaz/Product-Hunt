@@ -20,7 +20,7 @@ Product Hunt is a website that lets users share and discover new products.
 
 Bootstrap, Django
 
-## Support and contact Details
+## Support and contact Dgitetails
 
  collinsjumaz42@gmail.com
 
