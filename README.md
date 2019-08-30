@@ -1,13 +1,11 @@
-#Product Hunt
 
-## product Hunt Clone
+## Product Hunt Clone
 
 #### By Collins Juma
 
 ## Description
-This is a site build in django framework  and postgres db (for backend)
-Product Hunt is a website that lets users share and discover new products. 
-
+Product Hunt is a website that lets users share and discover new products. It's a place for product-loving enthusiasts to share and geek out about the latest mobile apps, websites, hardware projects, and tech creations.
+Its clone of https://www.producthunt.com.
 
 ## Setup
 
@@ -18,9 +16,13 @@ Product Hunt is a website that lets users share and discover new products.
 
 ## Technologies Used
 
-Bootstrap, Django
+* Bootstrap 
+* Open -Iconic - icons 
+* Django - functionality 
+* PostgresSQL - storage
+* WhiteNoise - handling static files
 
-## Support and contact Dgitetails
+## Support and contact Details
 
  collinsjumaz42@gmail.com
 

@@ -5,11 +5,12 @@
 *.log
 *.pot
 *.pyc
-*.env
+.env
 __pycache__/
 local_settings.py
 db.sqlite3
 /media
 /static
 /venv
-
+.env
+db.sqlite3
