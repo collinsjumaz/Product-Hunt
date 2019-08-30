@@ -6,7 +6,7 @@ https://docs.djangoproject.com/en/2.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
-import dj_database_url
+
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,7 +24,7 @@ SECRET_KEY = 'b*js#_b$3#yu7-w1f=+t3f_4#w0thd*k*oyez-o4m9$0&yb^rr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','producthuntclon.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'myproducthuntclone.herokuapp.com']
 
 
 # Application definition
@@ -79,15 +79,10 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'producthuntdb',
-        'USER': 'postgres',
-        'PASSWORD': 'capitolx89',
-        'HOST': 'localhost',
-        'PORT':  '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -122,14 +117,10 @@ USE_L10N = True
 USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-#STATICFILES_DIRS = [
- #   os.path.join(BASE_DIR, 'producthunt/static/')
-#]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
