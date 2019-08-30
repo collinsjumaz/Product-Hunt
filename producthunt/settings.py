@@ -24,7 +24,7 @@ SECRET_KEY = 'b*js#_b$3#yu7-w1f=+t3f_4#w0thd*k*oyez-o4m9$0&yb^rr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1','myproducthuntclone.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'myproducthuntclone.herokuapp.com']
 
 
 # Application definition
@@ -43,13 +43,14 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'producthunt.urls'
@@ -83,7 +84,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'capitolx89',
         'HOST': 'localhost',
-        'PORT':  '5432',git
+        'PORT':  '5432',
     }
 }
 
@@ -123,9 +124,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'producthunt/static/')
-]
+#STATICFILES_DIRS = [
+ #   os.path.join(BASE_DIR, 'producthunt/static/')
+#]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
