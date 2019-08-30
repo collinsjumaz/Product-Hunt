@@ -24,7 +24,7 @@ SECRET_KEY = 'b*js#_b$3#yu7-w1f=+t3f_4#w0thd*k*oyez-o4m9$0&yb^rr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'myproducthuntclone.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','producthuntclon.herokuapp.com']
 
 
 # Application definition
